@@ -1,0 +1,10 @@
+{
+  "uuid": "highbeam@sennlabs",
+  "name": "HighBeam",
+  "description": "A Spotlight-style search popup. Press Ctrl+Super+Space to search apps, open windows, files, settings and more without opening the Activities Overview. Includes a calculator: pressing Enter on an answer copies it to the clipboard. Results you pick are remembered locally (~/.local/share/highbeam) to improve ranking; this can be turned off.",
+  "shell-version": ["50"],
+  "settings-schema": "org.gnome.shell.extensions.highbeam",
+  "gettext-domain": "highbeam",
+  "url": "https://github.com/sennlabs/HighBeam",
+  "version-name": "0.1.0"
+}

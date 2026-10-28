@@ -1,0 +1,7 @@
+# Reference material, not part of the project
+search-light-main.zip
+
+# Build output
+build/
+schemas/gschemas.compiled
+node_modules/

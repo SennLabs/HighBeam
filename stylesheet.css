@@ -1,0 +1,171 @@
+/* SPDX-License-Identifier: GPL-2.0-or-later */
+
+/* Width, corner radius, background opacity, the base font size and the result
+ * list's max-height come from the settings and are set inline by
+ * src/ui/panel.js; the values here are the defaults. Font sizes below are in
+ * em of the panel's base size (10pt at 100%), so the text-size setting scales
+ * them all. The dark theme is the default; .highbeam-light overrides colours. */
+
+.highbeam-panel {
+  width: 680px;
+  padding: 6px;
+  border-radius: 16px;
+  font-size: 10pt;
+  background-color: rgba(36, 36, 40, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  color: #f2f2f2;
+}
+
+/* Search entry: large, borderless, blends into the panel. */
+.highbeam-entry,
+.highbeam-entry:focus,
+.highbeam-entry:hover {
+  font-size: 2em;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  box-shadow: none;
+  color: #ffffff;
+  caret-color: #ffffff;
+  selection-background-color: rgba(53, 132, 228, 0.6);
+  selected-color: #ffffff;
+}
+
+.highbeam-entry StLabel.hint-text {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.highbeam-entry-icon {
+  icon-size: 22px;
+  padding-right: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.highbeam-separator {
+  height: 1px;
+  margin: 4px 6px;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.highbeam-results {
+  max-height: 460px;
+}
+
+.highbeam-results-box {
+  padding: 2px 0;
+}
+
+.highbeam-section-header {
+  padding: 8px 12px 2px 12px;
+}
+
+.highbeam-section-title {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.highbeam-show-more {
+  font-size: 0.9em;
+  padding: 0 6px;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.highbeam-show-more:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.highbeam-row {
+  padding: 6px 12px;
+  border-radius: 10px;
+  color: #f2f2f2;
+}
+
+.highbeam-row:selected {
+  background-color: rgba(53, 132, 228, 0.85);
+  color: #ffffff;
+}
+
+.highbeam-top-hit {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.highbeam-row-icon {
+  padding-right: 12px;
+}
+
+.highbeam-row-title {
+  font-size: 1.1em;
+}
+
+/* Relative to the row, not the title, so it isn't 1.1 × 1.3. */
+.highbeam-top-hit .highbeam-row-title {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.highbeam-row-subtitle {
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.highbeam-row:selected .highbeam-row-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Light theme */
+
+.highbeam-light.highbeam-panel {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  color: #1e1e22;
+}
+
+.highbeam-light .highbeam-entry,
+.highbeam-light .highbeam-entry:focus,
+.highbeam-light .highbeam-entry:hover {
+  color: #1e1e22;
+  caret-color: #1e1e22;
+  selection-background-color: rgba(53, 132, 228, 0.35);
+  selected-color: #1e1e22;
+}
+
+.highbeam-light .highbeam-entry StLabel.hint-text {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.highbeam-light .highbeam-entry-icon {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.highbeam-light .highbeam-separator {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.highbeam-light .highbeam-section-title,
+.highbeam-light .highbeam-show-more {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.highbeam-light .highbeam-show-more:hover {
+  color: #1e1e22;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.highbeam-light .highbeam-row {
+  color: #1e1e22;
+}
+
+.highbeam-light .highbeam-row-subtitle {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.highbeam-light .highbeam-row:selected,
+.highbeam-light .highbeam-row:selected .highbeam-row-subtitle {
+  color: #ffffff;
+}

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="highbeam">
+  <enum id="org.gnome.shell.extensions.highbeam.PopupMonitor">
+    <value nick="primary" value="0"/>
+    <value nick="cursor" value="1"/>
+  </enum>
+  <enum id="org.gnome.shell.extensions.highbeam.Theme">
+    <value nick="auto" value="0"/>
+    <value nick="dark" value="1"/>
+    <value nick="light" value="2"/>
+  </enum>
+
+  <schema id="org.gnome.shell.extensions.highbeam" path="/org/gnome/shell/extensions/highbeam/">
+    <key name="toggle-highbeam" type="as">
+      <default><![CDATA[['<Control><Super>space']]]></default>
+      <summary>Toggle HighBeam</summary>
+      <description>Keyboard shortcut that opens and closes the search popup.</description>
+    </key>
+    <key name="popup-monitor" enum="org.gnome.shell.extensions.highbeam.PopupMonitor">
+      <default>'cursor'</default>
+      <summary>Monitor to open on</summary>
+      <description>Open the popup on the primary monitor, or on the monitor under the mouse pointer.</description>
+    </key>
+    <key name="max-app-results" type="i">
+      <range min="1" max="20"/>
+      <default>6</default>
+      <summary>Maximum application results</summary>
+    </key>
+    <key name="max-provider-results" type="i">
+      <range min="1" max="20"/>
+      <default>3</default>
+      <summary>Maximum results per search provider</summary>
+      <description>How many results to show from each GNOME search provider (Files, Settings, Calculator…), and from open windows.</description>
+    </key>
+    <key name="enable-calculator" type="b">
+      <default>true</default>
+      <summary>Calculator</summary>
+      <description>Show the answer when the query is arithmetic, such as 2+2 or sqrt(2). Enter copies it.</description>
+    </key>
+    <key name="enable-windows" type="b">
+      <default>true</default>
+      <summary>Open windows</summary>
+      <description>Search open windows by title and app, on every workspace.</description>
+    </key>
+    <key name="enable-system-actions" type="b">
+      <default>true</default>
+      <summary>System actions</summary>
+      <description>Include Lock Screen, Log Out, Power Off and similar actions in the application results.</description>
+    </key>
+    <key name="enable-web-search" type="b">
+      <default>true</default>
+      <summary>Web search</summary>
+      <description>Add a “Search the web for …” result (last, unless result-order says otherwise).</description>
+    </key>
+    <key name="web-search-url" type="s">
+      <default>'https://www.google.com/search?q=%s'</default>
+      <summary>Web search URL</summary>
+      <description>Address opened by the web search result. %s is replaced by the query.</description>
+    </key>
+    <key name="remember-query" type="b">
+      <default>true</default>
+      <summary>Remember the last query</summary>
+      <description>Show the previous query, selected, when the popup opens. Typing replaces it.</description>
+    </key>
+    <key name="learn-from-selections" type="b">
+      <default>true</default>
+      <summary>Learn from what you pick</summary>
+      <description>Rank results you picked before higher for the same or a similar query. The history is stored in ~/.local/share/highbeam/history.json.</description>
+    </key>
+    <key name="forget-history" type="u">
+      <default>0</default>
+      <summary>Forget learned results</summary>
+      <description>Incremented by the preferences' Forget button; HighBeam then clears its history. Not meant to be set by hand.</description>
+    </key>
+    <key name="result-order" type="as">
+      <default>['calculator', 'apps', 'windows', 'gnome', 'web']</default>
+      <summary>Section order</summary>
+      <description>Order of the result sections: calculator, apps, windows, gnome (GNOME's search providers, in the order set in GNOME Settings) and web. Missing entries are added at the end.</description>
+    </key>
+
+    <key name="theme" enum="org.gnome.shell.extensions.highbeam.Theme">
+      <default>'auto'</default>
+      <summary>Theme</summary>
+      <description>Dark, light, or follow the system style (Settings → Appearance).</description>
+    </key>
+    <key name="panel-width" type="i">
+      <range min="400" max="1400"/>
+      <default>680</default>
+      <summary>Popup width in pixels</summary>
+    </key>
+    <key name="results-max-height" type="i">
+      <range min="150" max="1000"/>
+      <default>460</default>
+      <summary>Maximum height of the result list in pixels</summary>
+    </key>
+    <key name="font-scale" type="i">
+      <range min="70" max="200"/>
+      <default>100</default>
+      <summary>Text size in percent</summary>
+    </key>
+    <key name="corner-radius" type="i">
+      <range min="0" max="40"/>
+      <default>16</default>
+      <summary>Corner radius in pixels</summary>
+    </key>
+    <key name="background-opacity" type="i">
+      <range min="30" max="100"/>
+      <default>95</default>
+      <summary>Background opacity in percent</summary>
+    </key>
+    <key name="blur" type="b">
+      <default>true</default>
+      <summary>Blur behind the popup</summary>
+      <description>Blur whatever is behind the popup. Most visible with a lower background opacity.</description>
+    </key>
+    <key name="blur-radius" type="i">
+      <range min="1" max="100"/>
+      <default>30</default>
+      <summary>Blur radius in pixels</summary>
+    </key>
+  </schema>
+</schemalist>
