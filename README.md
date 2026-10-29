@@ -43,7 +43,7 @@ to open the right thing.
 From a release zip, or one you build with `make pack`:
 
 ```sh
-gnome-extensions install --force highbeam@kthompson.shell-extension.zip
+gnome-extensions install --force highbeam@sennlab.com.shell-extension.zip
 ```
 
 Log out and back in (Wayland needs this), then switch HighBeam on in the
@@ -84,7 +84,7 @@ Restart and Log Out still ask first, just like in the Overview.
 ## 🎛️ Settings
 
 Open the **Extensions** app → HighBeam → ⚙, or run
-`gnome-extensions prefs highbeam@kthompson`.
+`gnome-extensions prefs highbeam@sennlab.com`.
 
 | Page | What's there |
 |---|---|
@@ -121,7 +121,7 @@ names and roles, and everything works from the keyboard.
 | `make logs` | Follow GNOME Shell's log |
 | `make test` | Unit tests for the engine, ranking, calculator and history (`gjs -m tests/run.js`) |
 | `make lint` | ESLint (fetched with `npx`) |
-| `make pack` | Build `build/highbeam@kthompson.shell-extension.zip` (with compiled translations, if any) |
+| `make pack` | Build `build/highbeam@sennlab.com.shell-extension.zip` (with compiled translations, if any) |
 | `make pot` | Update the translation template `po/highbeam.pot` (needs `gettext`) |
 
 On Wayland a running session only loads a newly installed extension after you
@@ -173,7 +173,7 @@ code to `po/LINGUAS`. `make pack` compiles every `po/*.po` into the zip.
 2. `make lint test pack`.
 3. Install the zip and run through the manual checks in
    [PLAN.md](PLAN.md#4-testing-strategy).
-4. Upload `build/highbeam@kthompson.shell-extension.zip` at
+4. Upload `build/highbeam@sennlab.com.shell-extension.zip` at
    <https://extensions.gnome.org/upload/>.
 
 What reviewers check, and where HighBeam stands:

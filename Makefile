@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-UUID      := highbeam@kthompson
+UUID      := highbeam@sennlab.com
 EXT_DIR   := $(HOME)/.local/share/gnome-shell/extensions/$(UUID)
 BUILD_DIR := build
 ZIP       := $(BUILD_DIR)/$(UUID).shell-extension.zip

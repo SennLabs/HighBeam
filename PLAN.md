@@ -3,7 +3,7 @@
 HighBeam is a GNOME Shell extension that opens a Spotlight-style search box with a hotkey. It shows up centred on screen, outside the Activities Overview, and lets you launch apps, open files, run settings, do quick calculations and switch windows from the keyboard.
 
 - **Target:** GNOME Shell 50 only (the version installed here is 50.1). ESM modules only.
-- **UUID:** `highbeam@kthompson`. This can still be changed until the first upload to extensions.gnome.org; after that it is permanent. It only needs to be unique; it does not have to be a real domain.
+- **UUID:** `highbeam@sennlab.com`. This can still be changed until the first upload to extensions.gnome.org; after that it is permanent. It only needs to be unique; it does not have to be a real domain.
 - **License:** GPL-2.0-or-later, the same as GNOME Shell and Search Light, so code from the reference can be reused with attribution.
 - **Reference:** `search-light-main.zip` (icedman/search-light v101, GNOME 48–50).
 
@@ -69,7 +69,7 @@ Search Light gets its results by *borrowing the Overview's own search widgets*. 
 
 ### Directory layout
 ```
-highbeam@kthompson/
+highbeam@sennlab.com/
   LICENSE                 # GPL-2.0-or-later
   metadata.json
   extension.js            # enable()/disable() → creates/destroys Controller
@@ -110,7 +110,7 @@ Each phase finishes with something that runs in a nested shell.
 
 ### Phase 0: Scaffold and dev loop
 - `LICENSE` (GPL-2.0-or-later) and SPDX headers in each source file.
-- `metadata.json` (uuid `highbeam@kthompson`, `shell-version: ["50"]`, `settings-schema`, `gettext-domain`), plus an empty `enable`/`disable`.
+- `metadata.json` (uuid `highbeam@sennlab.com`, `shell-version: ["50"]`, `settings-schema`, `gettext-domain`), plus an empty `enable`/`disable`.
 - Makefile targets:
   - `schemas` (`glib-compile-schemas`)
   - `install` (symlink into `~/.local/share/gnome-shell/extensions/`)
@@ -208,5 +208,5 @@ Each phase finishes with something that runs in a nested shell.
 |---|---|
 | GNOME versions | 50 only |
 | License | GPL-2.0-or-later |
-| UUID | `highbeam@kthompson` (can change until the first upload to extensions.gnome.org) |
+| UUID | `highbeam@sennlab.com` (can change until the first upload to extensions.gnome.org) |
 | First usable build | Phases 0–3. The calculator and window search follow in Phase 4. |

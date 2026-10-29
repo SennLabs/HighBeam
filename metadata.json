@@ -1,5 +1,5 @@
 {
-  "uuid": "highbeam@sennlabs",
+  "uuid": "highbeam@sennlab.com",
   "name": "HighBeam",
   "description": "A Spotlight-style search popup. Press Ctrl+Super+Space to search apps, open windows, files, settings and more without opening the Activities Overview. Includes a calculator: pressing Enter on an answer copies it to the clipboard. Results you pick are remembered locally (~/.local/share/highbeam) to improve ranking; this can be turned off.",
   "shell-version": ["50"],
